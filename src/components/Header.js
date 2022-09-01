@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import './style.css'
 import styled from 'styled-components'
 import { Autoplay, Pagination, Navigation } from "swiper";
+import blacklogo from '../assests/Used_Black FBL  1.png';
 
 const Div = styled.div`
   height: 100vh;
@@ -17,10 +18,9 @@ const Header = () => {
   return (
     <Div>
         <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
+        
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -30,8 +30,22 @@ const Header = () => {
         modules={[Autoplay, Pagination, Navigation]}
 
       >
-        <SwiperSlide style={{backgroundColor: '#194A47'}}>Slide 1</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: '#194A47'}}>Slide 2</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: '#194A47'}}>
+          <p  style={{color: 'white',textAlign:'left'}}>
+          <h1>FASHION</h1> 
+          made easy for you.<br></br>
+          A cordial space showcasing the best of multi-designer<br></br> collections of clothing, footwear and accessories for<br></br> Men, Women, and Kids.
+          </p>
+          <img alt="" src={blacklogo} height="50%" width= "50%" />
+        </SwiperSlide>
+        <SwiperSlide style={{backgroundColor: '#194A47'}}>
+        <p  style={{color: 'white',textAlign:'left'}}>
+          <h1>Crafted in India,</h1> 
+          Packaged to the World.<br></br>
+          A cordial space showcasing the best of multi-designer<br></br> collections of clothing, footwear and accessories for<br></br> Men, Women, and Kids.
+          </p>
+          <img alt="" src={blacklogo} height="50%" width= "50%" />
+        </SwiperSlide>
         <SwiperSlide style={{backgroundColor: '#194A47'}}>Slide 3</SwiperSlide>
       </Swiper>
     </Div>

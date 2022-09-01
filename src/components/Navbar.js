@@ -6,7 +6,7 @@ import LogoImg from '../assests/logoimg.svg'
 const Navbar = () => {
   return (
     <React.Fragment>
-      <AppBar sx={{background: '#194A47'}}>
+      <AppBar sx={{background: '#194A47'}} xs={{span:4}}>
         <Toolbar>
           <Box>
             <img alt="" src={LogoImg} width="200px" height="75%" />
