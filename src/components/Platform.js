@@ -68,7 +68,7 @@ const Text2 = styled.div`
     font-size: 20px;
     color: #6C6C6C;
     font-family: "inter", sans-serif;
-    text-align: justify;
+    text-align: left;
 `;
 
 const Middle = styled.div`
