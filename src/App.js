@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Partner from './components/Partner';
 import Platform from './components/Platform';
 
 
 const App = () => {
   return (
     <div>
-      <Navbar />
       <Header />
       <Platform/>
+      <Partner/>
     </div>
   )
 }
