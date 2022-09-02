@@ -102,6 +102,7 @@ const Container2 = styled.div`
     justify-content: space-evenly;
     background-color: white;
     padding-top: 80px;
+    padding-bottom: 60px;
     `;
 
 const Img = styled.div`

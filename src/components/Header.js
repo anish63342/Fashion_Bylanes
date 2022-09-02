@@ -14,12 +14,55 @@ const Div = styled.div`
   background-color: #194A47;
   `;
 
+const Container = styled.div`
+  padding-top: 240px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  `;
+
 const LandingText = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+
   `;
 
 const LandingImg = styled.div`
-  
+  height: 100%;
+  display: block;
+  `;
+
+const Heading = styled.div`
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  `;
+
+const Text1 = styled.h1`
+  color: white;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  `;
+
+const Text2 = styled.h1`
+  color: #FB6542;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  `;
+
+const Desc = styled.p`
+  font-size: 20px;
+  color: white;
+  font-family: "inter", sans-serif;
+  width: 30vw;
+  text-align: center;
+  `;
+const Line = styled.div`
+  display: flex;
+  flex-direction: row;
   `;
 
 const Header = () => {
@@ -40,22 +83,25 @@ const Header = () => {
       >
         <Navbar/>
         <SwiperSlide style={{backgroundColor: '#194A47'}}>
-          <div>
-            <p  style={{color: 'white',textAlign:'left'}}>
-            <h1>FASHION</h1> 
-            made easy for you.<br></br>
-            A cordial space showcasing the best of multi-designer<br></br> collections of clothing, footwear and accessories for<br></br> Men, Women, and Kids.
-            </p>
-          </div>
-          <img alt="" src={blacklogo} height="50%" width= "50%" />
+          <Container>
+            <LandingText>
+              <Heading>
+                <Line>
+                  <Text1>Crafted in</Text1>
+                  <Text2>&nbsp;India,</Text2>
+                </Line>
+                <Line>
+                  <Text1>Packaged for the </Text1>
+                  <Text2>&nbsp;World.</Text2>
+                </Line>
+              </Heading>
+              <Desc>We are a multi-vendor platform intending to provide the designers from the bylanes of India a Global exposure.</Desc>
+            </LandingText>
+            <LandingImg><img alt="" src={blacklogo} height="100%" width= "100%" /></LandingImg>
+          </Container>
         </SwiperSlide>
         <SwiperSlide style={{backgroundColor: '#194A47'}}>
-        <p  style={{color: 'white',textAlign:'left'}}>
-          <h1>Crafted in India,</h1> 
-          Packaged to the World.<br></br>
-          A cordial space showcasing the best of multi-designer<br></br> collections of clothing, footwear and accessories for<br></br> Men, Women, and Kids.
-          </p>
-          <img alt="" src={blacklogo} height="50%" width= "50%" />
+          Slide 2
         </SwiperSlide>
         <SwiperSlide style={{backgroundColor: '#194A47'}}>Slide 3</SwiperSlide>
       </Swiper>
