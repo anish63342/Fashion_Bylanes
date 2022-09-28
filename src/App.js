@@ -1,4 +1,5 @@
 import React from 'react';
+import Copyright from './components/Copyright';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Partner from './components/Partner';
@@ -14,6 +15,7 @@ const App = () => {
       <Partner/>
       <Work/>
       <Footer/>
+      <Copyright/>
     </div>
   )
 }

@@ -41,7 +41,7 @@ const Heading = styled.div`
     font-weight: bold;
     font-size: 36px;
     color: #E57A7A;
-    font-family: "inter", sans-serif;
+    font-family: "Inter", sans-serif;
     text-align: center;
   `;
 
@@ -55,14 +55,15 @@ const Text = styled.div`
     color: #6C6C6C;
     font-style: inter;
     text-align: center;
+    font-family: "Inter", sans-serif;
   `;
 
-const Heading2 = styled.div`
-    font-weight: bold;
-    font-size: 24px;
-    color: #194A47;
-    font-family: "inter", sans-serif;
-    text-align: center;`;
+// const Heading2 = styled.div`
+//     font-weight: bold;
+//     font-size: 24px;
+//     color: #194A47;
+//     font-family: "inter", sans-serif;
+//     text-align: center;`;
 
 const Text2 = styled.div`
     padding-top: 20px;
@@ -70,7 +71,7 @@ const Text2 = styled.div`
     
     font-size: 20px;
     color: #6C6C6C;
-    font-family: "inter", sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
 `;
 
@@ -80,7 +81,7 @@ const Text3 = styled.div`
     padding-bottom: 10px;
     font-size: 24px;
     color: #6C6C6C;
-    font-family: "inter", sans-serif;
+    font-family: "Inter", sans-serif;
     text-align: center;
 `;
 

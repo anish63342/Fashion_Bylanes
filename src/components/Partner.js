@@ -7,7 +7,7 @@ import { Button } from '@mui/material';
 const Container = styled.div`
     background-color : #FFE7E7;
     padding-top: 100px;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
     `;
 
 const Container2 = styled.div`
@@ -36,7 +36,7 @@ const Heading1 = styled.div`
     font-weight: bold;
     font-size: 36px;
     color: #E57A7A;
-    font-family: "inter", sans-serif;
+    font-family: "Inter", sans-serif;
     text-align: center;
     padding-bottom: 100px;
     `;
@@ -46,7 +46,7 @@ const Heading2 = styled.div`
     font-weight: bold;
     font-size: 28px;
     color: #194A47;
-    font-family: "inter", sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
   `;
 
@@ -55,7 +55,7 @@ const Text = styled.div`
     padding-bottom: 10px;
     font-size: 18px;
     color: #6C6C6C;
-    font-family: "inter", sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
 `;
 
