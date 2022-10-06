@@ -6,39 +6,37 @@ import { Button } from '@mui/material';
 
 const Container = styled.div`
     background-color : #FFE7E7;
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     `;
 
 const Container2 = styled.div`
     display : flex;
     flex-direction : row;
     justify-content: space-around;
-    
     `;
 
 const Container3 = styled.div`
     display : flex;
     flex-direction : column;
-    justify-content: space-around;
+    
     align-items: center;
     `;
 
 const ImgContainer = styled.div`
-    height: 100%;
     display: block;
     display: flex;
     justify-content: center;
-    padding-bottom: 15px;
+    
   `;
 
 const Heading1 = styled.div`
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 36px;
     color: #E57A7A;
     font-family: "Inter", sans-serif;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     `;
 
 const Heading2 = styled.div`
@@ -56,52 +54,61 @@ const Text = styled.div`
     font-size: 18px;
     color: #6C6C6C;
     font-family: "Lato", sans-serif;
-    text-align: center;
+    text-align: left;
 `;
 
 const TextContainer = styled.div`
-  width: 25vw;
+  width: 40vw;
   color: #585858;
   font-style: "lato", sans-serif;
   padding-bottom: 20px;
   `;
 
-
+const ButtonContainer = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    align-items: center;
+    justify-content: end;
+`;
 
 const Partner = () => {
   return (
-    <Container>
+    <Container id="partner">
         <Heading1>
             Partner With Us
         </Heading1>
         <Container2>
             <Container3>
                 <ImgContainer>
-                    <img alt="" src={img1} height="99%" width= "100%" />
+                    <img alt="" src={img1} height="350" width= "350" />
                 </ImgContainer>
                 <Heading2>
                     As Vendor
                 </Heading2>
                 <TextContainer>
                     <Text>
-                        We believe fashion has no boundaries, and with the idea of launching globally we are not only expanding the clothing worldwide, but we are spreading the roots of our culture too. We are providing the designers with a platform to make their art resonate.
+                    The art and designs from India are certain to be accepted by a Global audience and could cause a frenzy. The idea to launch globally originates from expanding clothing worldwide as well as spreading the roots of our culture too. Our primary focus is the traditional handloom and textile industries, designers, boutiques, small businesses, street markets in the country that are flourishing with homegrown talents to help them increase the scalability and aid in the expedition of becoming bigger. 
                     </Text>
                 </TextContainer>
-                <Button variant="contained" size="medium" color="error">Join Us</Button>
+                <Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button>
             </Container3>
             <Container3>
                 <ImgContainer>
-                    <img alt="" src={img2} height="100%" width= "100%" />
+                    <img alt="" src={img2} height="350" width= "350" />
                 </ImgContainer>
                 <Heading2>
                     As Influencer
                 </Heading2>
                 <TextContainer>
                     <Text>
-                    Influencer marketing has been the most successful strategy for styling and fashion brands. The reach through influencer marketing has been tremendous, and we at FBL are impending this opportunity and buckling ourselves to coin this reach for our benefit. 
+                    Influencer marketing has been the most successful strategy for styling and fashion in the recent times. We plan to bridge the gap between the designers and influencers by tapping onto this sector. Influencers across the country will be provided with an opportunity to connect with likeminded designers and work along with them.  
                     </Text>
                 </TextContainer>
-                <Button variant="contained" size="medium" color="error">Join Us</Button>
+                <ButtonContainer><Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button></ButtonContainer>
+                
             </Container3>
         </Container2>
     </Container>

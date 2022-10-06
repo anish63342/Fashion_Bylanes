@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppBar, Toolbar, Box}  from '@mui/material';
-import LogoImg from '../assests/logoimg0.svg';
+import LogoImg from '../assests/logoimg.svg';
  import { Link } from "react-scroll";
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -27,7 +27,7 @@ import LogoImg from '../assests/logoimg0.svg';
     <React.Fragment>
       <AppBar sx={{background: 'rgba(0,0,0,0)', boxShadow: 'none' }}  xs={{span:4}} id="Navbar" position="static" >
         <Toolbar >
-          <Box style={{paddingTop:'20px'}}>
+          <Box>
             <img alt="" src={LogoImg} width="200px" height="75%"  />
           </Box>
           <ul style={{listStyleType: 'none',width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', color: 'white', fontWeight: 'bold', fontSize: '18px', fontFamily: 'Lato', cursor: 'pointer' }}>

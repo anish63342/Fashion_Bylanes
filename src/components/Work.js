@@ -9,7 +9,7 @@ import img4 from '../assests/diverse.png';
 
 const Container = styled.div`
     background-color : white;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 40px;
     `;
 
@@ -68,7 +68,7 @@ const Text = styled.div`
 const Text2 = styled.div`
     padding-top: 20px;
     padding-bottom: 10px;
-    
+    font-weight: 500;
     font-size: 20px;
     color: #6C6C6C;
     font-family: "Lato", sans-serif;
@@ -76,13 +76,14 @@ const Text2 = styled.div`
 `;
 
 const Text3 = styled.div`
-    width: 30vw;
+    width: 100%;
     padding-top: 40px;
     padding-bottom: 10px;
     font-size: 24px;
     color: #6C6C6C;
     font-family: "Inter", sans-serif;
     text-align: center;
+    justify-content: center;
 `;
 
 const Middle = styled.div`
@@ -113,7 +114,7 @@ const Img = styled.div`
 
 const Work = () => {
   return (
-    <div>
+    <div id="careers">
         <Container>
             <Heading>
                 Work At FBL
@@ -127,11 +128,11 @@ const Work = () => {
                 We are here to showcase the new and upcoming boutique designer collections available all over India. Our vision is to present fashion in a more native way. At FBL, we are dedicated to identifying and encouraging emerging talent from around the country. 
                 </Text2>
                 <ButtonContainer>
-                    <Button variant="contained" size="medium" color="error">Explore Careers</Button>
+                <Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button>
                 </ButtonContainer>
             </TextContainer>
             <ImgContainer>
-                <img alt="" src={img1} height="120%" width= "120%" />
+                <img alt="" src={img1} height="227px" width= "277px" />
             </ImgContainer>
         </Container1>
         <Container2>

@@ -1,11 +1,12 @@
 import React from 'react'
 import {AppBar, Toolbar, Box}  from '@mui/material';
-import LogoImg from '../assests/logoimg0.svg';
+import LogoImg from '../assests/logoimg.svg';
+import LogoImg1 from '../assests/logoimg1.svg';
  import { Link } from "react-scroll";
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
- const Navbar = () => {
+ const Navbar1 = () => {
   // const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -27,10 +28,10 @@ import LogoImg from '../assests/logoimg0.svg';
     <React.Fragment>
       <AppBar sx={{background: 'rgba(0,0,0,0)', boxShadow: 'none' }}  xs={{span:4}} id="Navbar" position="static" >
         <Toolbar >
-          <Box style={{paddingTop:'20px'}}>
-            <img alt="" src={LogoImg} width="200px" height="75%"  />
+          <Box>
+            <img alt="" src={LogoImg1} width="200px" height="75%"  />
           </Box>
-          <ul style={{listStyleType: 'none',width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', color: 'white', fontWeight: 'bold', fontSize: '18px', fontFamily: 'Lato', cursor: 'pointer' }}>
+          <ul style={{listStyleType: 'none',width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', color: 'black', fontWeight: 'bold', fontSize: '20px', fontFamily: 'Lato', cursor: 'pointer' }}>
             <li>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
                 Home
@@ -81,4 +82,4 @@ import LogoImg from '../assests/logoimg0.svg';
   )
 }
 
-export default Navbar;
+export default Navbar1;

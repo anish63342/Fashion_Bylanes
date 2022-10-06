@@ -7,9 +7,11 @@ import './style.css'
 import styled from 'styled-components'
 import { Autoplay, Pagination, Navigation } from "swiper";
 import blacklogo from '../assests/Used_Black FBL  1.png';
-import img2 from '../assests/Group 199.png';
+import img2 from '../assests/LandingImage2.png';
 import img3 from '../assests/Rectangle 40.png'
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
+import Navbar1 from '../components/Navbar1';
+import Navbar2 from '../components/Navbar2';
 import { Button } from '@mui/material';
 
 const Div = styled.div`
@@ -18,42 +20,58 @@ const Div = styled.div`
   `;
 
 const Container = styled.div`
-  padding-top: 240px;
   height: 100%;
+  width: 100%;
+  
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   `;
 
 const Container2 = styled.div`
-  padding-top: 240px;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  background-image: url('LandingImage2.png');
+  background-position: center;
+  background-size: cover ;
   `;
 
 const Container3 = styled.div`
-  padding-top: 240px;
   height: 100%;
-  width: 80%;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  background-image: url('LandingImage3.png');
+  background-position: center;
+  background-size: cover ;
   `;
 
 
 const LandingText = styled.div`
+  border-top: none;
+  margin-top: 0px;
+  padding-left: 40px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   `;
 
 
 const LandingText2 = styled.div`
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
-  padding-top: 60px;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 65%;
   `;
 
 const LandingText3 = styled.div`
@@ -65,18 +83,17 @@ const LandingText3 = styled.div`
 
 const LandingImg = styled.div`
   height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
   `;
 
-const LandingImg2 = styled.div`
-  height: 100%;
-  `;
 
 const Heading = styled.div`
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
-  font-size: 70px;
+  font-size: 7.6vh;
   font-family: 'Poppins', sans-serif;
   `;
 
@@ -99,7 +116,12 @@ const Text2 = styled.span`
   color: #FB6542;
   font-family: "poppins", sans-serif;
   font-weight: bold;
-  
+  `;
+
+const Text3 = styled.span`
+  color: #F09A41;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
   `;
 
 const Desc = styled.p`
@@ -115,6 +137,14 @@ const Line = styled.span`
   display: flex;
   padding: 0px;
   `;
+
+const C1 = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  `; 
 
 const Header = () => {
   return (
@@ -132,40 +162,39 @@ const Header = () => {
         modules={[Autoplay, Pagination, Navigation]}
 
       >
-        <Navbar/>
+        
         <SwiperSlide style={{backgroundColor: '#194A47'}}>
           <Container>
-            <LandingText>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <Heading>
-                <Line>
-                  <Text1>Crafted in</Text1>
-                  <Text2>&nbsp;India,</Text2>
-                </Line>
-                <Line>
-                  <Text1>Packaged for the </Text1>
-                  <Text2>&nbsp;World.</Text2>
-                </Line>
-              </Heading>
-              {/* <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <Desc>We are a multi-vendor platform intending to provide the designers from the bylanes of India a Global exposure.</Desc> */}
-            </LandingText>
-            <LandingImg><img alt="" src={blacklogo} height="100%" width= "100%" /></LandingImg>
+            <Navbar/>
+            <C1>
+              <LandingText>
+                <Heading>
+                  <Line>
+                    <Text1>Crafted in</Text1>
+                    <Text2>&nbsp;India,</Text2>
+                  </Line>
+                  <Line>
+                    <Text1>Packaged for the </Text1>
+                    <Text2>&nbsp;World.</Text2>
+                  </Line>
+                </Heading>
+                {/* <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Desc>We are a multi-vendor platform intending to provide the designers from the bylanes of India a Global exposure.</Desc> */}
+              </LandingText>
+              <LandingImg><img alt="" src={blacklogo} height="100%" width= "auto" /></LandingImg>
+            </C1>
           </Container>
         </SwiperSlide>
-        <SwiperSlide style={{backgroundColor: '#194A47'}}>
+        {/* <SwiperSlide style={{backgroundColor: '#194A47'}}>
           <Container2>
             <LandingImg2>
               <img alt="" src={img2} height="100%" width= "100%" />
             </LandingImg2>
-            <LandingText2>
+             <LandingText2>
               <Heading2>
                 <Line>
                   <Text1>Communicate</Text1>
@@ -188,8 +217,37 @@ const Header = () => {
               <Button variant="contained" size="large" color="error">Know More</Button>
             </LandingText3>
           </Container3>
+        </SwiperSlide> */}
+        <SwiperSlide > 
+          <Container2>
+            <Navbar1 style = {{border : 'none', margin: '0px'}} />
+            <LandingText2>
+              <Heading>
+                <Line>
+                  <Text1>Communicate</Text1>
+                  <Text3>&nbsp;Art</Text3>
+                  <Text1>&nbsp;through</Text1>
+                  <Text3>&nbsp;Fashion</Text3>
+                </Line>
+              </Heading>
+            </LandingText2>
+          </Container2>
         </SwiperSlide>
-      </Swiper>
+        <SwiperSlide > 
+          <Container3>
+            <Navbar2 />
+            <LandingText2>
+            <Heading>
+                <Line>
+                  <Text3>Personalization</Text3>
+                  <Text1>&nbsp;equals</Text1>
+                  <Text3>&nbsp;Customization</Text3>
+                </Line>
+              </Heading>
+            </LandingText2>
+          </Container3>
+        </SwiperSlide>
+      </ Swiper>
     </Div>
   )
 }
