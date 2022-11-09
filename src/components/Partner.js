@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img1 from '../assests/Vendor.png';
 import img2 from '../assests/Influencer.png';
 import { Button } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Container = styled.div`
     background-color : #FFE7E7;
@@ -74,45 +75,85 @@ const ButtonContainer = styled.div`
     justify-content: end;
 `;
 
-const Partner = () => {
+export default function Partner() {
+  const isMobile = useMediaQuery('(max-width:640px)');
   return (
-    <Container id="partner">
-        <Heading1>
-            Partner With Us
-        </Heading1>
-        <Container2>
-            <Container3>
-                <ImgContainer>
-                    <img alt="" src={img1} height="350" width= "350" />
-                </ImgContainer>
-                <Heading2>
-                    As Vendor
-                </Heading2>
-                <TextContainer>
-                    <Text>
-                    The art and designs from India are certain to be accepted by a Global audience and could cause a frenzy. The idea to launch globally originates from expanding clothing worldwide as well as spreading the roots of our culture too. Our primary focus is the traditional handloom and textile industries, designers, boutiques, small businesses, street markets in the country that are flourishing with homegrown talents to help them increase the scalability and aid in the expedition of becoming bigger. 
-                    </Text>
-                </TextContainer>
-                <Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button>
-            </Container3>
-            <Container3>
-                <ImgContainer>
-                    <img alt="" src={img2} height="350" width= "350" />
-                </ImgContainer>
-                <Heading2>
-                    As Influencer
-                </Heading2>
-                <TextContainer>
-                    <Text>
-                    Influencer marketing has been the most successful strategy for styling and fashion in the recent times. We plan to bridge the gap between the designers and influencers by tapping onto this sector. Influencers across the country will be provided with an opportunity to connect with likeminded designers and work along with them.  
-                    </Text>
-                </TextContainer>
-                <ButtonContainer><Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button></ButtonContainer>
-                
-            </Container3>
-        </Container2>
-    </Container>
+    <div id="partner">
+        {isMobile ?(
+            <Container style={{paddingTop: "2rem"}}>
+            <Heading1 style={{paddingBottom: "0.5rem"}}>
+                Partner With Us
+            </Heading1>
+            <Container2 style={{flexDirection: "column"}}>
+                <Container3 style={{paddingBottom: "2.5rem"}}>
+                    <Heading2 style={{paddingTop: "0.1rem", fontSize: "2.2rem", paddingBottom: "0.4rem"}}>
+                        As Vendor
+                    </Heading2>
+                    <ImgContainer>
+                        <img alt="" src={img1} height="225" width= "225" />
+                    </ImgContainer>
+                    <TextContainer style={{width:"85vw"}}>
+                        <Text>
+                        The art and designs from India are certain to be accepted by a Global audience and could cause a frenzy. The idea to launch globally originates from expanding clothing worldwide as well as spreading the roots of our culture too. Our primary focus is the traditional handloom and textile industries, designers, boutiques, small businesses, street markets in the country that are flourishing with homegrown talents to help them increase the scalability and aid in the expedition of becoming bigger. 
+                        </Text>
+                    </TextContainer>
+                    <Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button>
+                </Container3>
+                <Container3>
+                    <Heading2 style={{paddingTop: "0.1rem", fontSize: "2.2rem", paddingBottom: "0.4rem"}}>
+                        As Influencer
+                    </Heading2>
+                    <ImgContainer>
+                        <img alt="" src={img2} height="225" width= "225" />
+                    </ImgContainer>
+                    <TextContainer style={{width:"85vw"}}>
+                        <Text>
+                        Influencer marketing has been the most successful strategy for styling and fashion in the recent times. We plan to bridge the gap between the designers and influencers by tapping onto this sector. Influencers across the country will be provided with an opportunity to connect with likeminded designers and work along with them.  
+                        </Text>
+                    </TextContainer>
+                    <ButtonContainer><Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button></ButtonContainer>  
+                </Container3>
+            </Container2>
+        </Container>
+        ):(
+            <Container>
+            <Heading1>
+                Partner With Us
+            </Heading1>
+            <Container2>
+                <Container3>
+                    <ImgContainer>
+                        <img alt="" src={img1} height="350" width= "350" />
+                    </ImgContainer>
+                    <Heading2>
+                        As Vendor
+                    </Heading2>
+                    <TextContainer>
+                        <Text>
+                        The art and designs from India are certain to be accepted by a Global audience and could cause a frenzy. The idea to launch globally originates from expanding clothing worldwide as well as spreading the roots of our culture too. Our primary focus is the traditional handloom and textile industries, designers, boutiques, small businesses, street markets in the country that are flourishing with homegrown talents to help them increase the scalability and aid in the expedition of becoming bigger. 
+                        </Text>
+                    </TextContainer>
+                    <Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button>
+                </Container3>
+                <Container3>
+                    <ImgContainer>
+                        <img alt="" src={img2} height="350" width= "350" />
+                    </ImgContainer>
+                    <Heading2>
+                        As Influencer
+                    </Heading2>
+                    <TextContainer>
+                        <Text>
+                        Influencer marketing has been the most successful strategy for styling and fashion in the recent times. We plan to bridge the gap between the designers and influencers by tapping onto this sector. Influencers across the country will be provided with an opportunity to connect with likeminded designers and work along with them.  
+                        </Text>
+                    </TextContainer>
+                    <ButtonContainer><Button variant="contained" size="large" style = {{backgroundColor: '#FB6542', width: '180px'}}>Join Us</Button></ButtonContainer>
+                    
+                </Container3>
+            </Container2>
+        </Container>
+        )}
+        
+    </div>
   )
 }
-
-export default Partner

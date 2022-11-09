@@ -3,8 +3,25 @@ import {AppBar, Toolbar, Box}  from '@mui/material';
 import LogoImg from '../assests/logoimg.svg';
 import LogoImg1 from '../assests/logoimg1.svg';
  import { Link } from "react-scroll";
+ import styled from 'styled-components';
+ import {mobile} from "../responsive";
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const Ul = styled.ul`
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Lato;
+  cursor: pointer;
+  
+  `;
+
 
  const Navbar1 = () => {
   // const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,11 +44,11 @@ import LogoImg1 from '../assests/logoimg1.svg';
   return (
     <React.Fragment>
       <AppBar sx={{background: 'rgba(0,0,0,0)', boxShadow: 'none' }}  xs={{span:4}} id="Navbar" position="static" >
-        <Toolbar >
+        <Toolbar>
           <Box>
             <img alt="" src={LogoImg1} width="200px" height="75%"  />
           </Box>
-          <ul style={{listStyleType: 'none',width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', color: 'black', fontWeight: 'bold', fontSize: '20px', fontFamily: 'Lato', cursor: 'pointer' }}>
+          <Ul>
             <li>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
                 Home
@@ -67,7 +84,7 @@ import LogoImg1 from '../assests/logoimg1.svg';
                 Contact Us
               </Link>
             </li>
-          </ul>
+          </Ul>
           {/* <Tabs sx={{marginLeft: 'auto',  marginRight: 'auto' }} textColor= "white">
             <Tab sx={{fontFamily:'lato', textTransform: 'capitalize', fontSize: '20px'}}  label= "Home" />
             <Tab sx={{fontFamily:'lato', textTransform: 'capitalize', fontSize: '20px'}} label= "About Us" />

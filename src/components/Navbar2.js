@@ -2,8 +2,24 @@ import React from 'react'
 import {AppBar, Toolbar, Box}  from '@mui/material';
 import LogoImg from '../assests/logoimg.svg';
  import { Link } from "react-scroll";
+ import {mobile} from '../responsive';
+ import styled from 'styled-components';
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const Ul = styled.ul`
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Lato;
+  cursor: pointer;
+  ${mobile({ display: "none"})}
+  `;
 
  const Navbar = () => {
   // const [anchorElNav, setAnchorElNav] = React.useState(null);
